@@ -19,18 +19,26 @@
 ## Simple desc
 
 
-- Client sided (from client to server)
-  - Message general:
+- Client sided (from client to server) [DONE]
+  - Registration: [register.proto]
+    - Username: string
+  - Message general: [message_general.proto]
     - Message: string
     - Status: StatusEnum
     - Username-origin: string
-  - Registration:
-    - Username: string
-  - Message dm:
+  - Message dm: [message_dm.proto]
     - Message: string
     - Status: StatusEnum
     - Username-des: string
-  - Quit:
+  - Change status: [change_status.proto]
+    - Status: StatusEnum
+    - Username: string
+  - List users: [list_users.proto]
+    - Username: string
+  - Get user info: [get_user_info.proto]
+    - Username-des: string
+    - Username: string
+  - Quit: [quit.proto]
     - Quit: 0-1
 
 ![NOTE]: Protos from the client side will always carry there IP in them, for having notion of which are they
