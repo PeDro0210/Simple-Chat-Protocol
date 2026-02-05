@@ -44,11 +44,19 @@
 ![NOTE]: Protos from the client side will always carry there IP in them, for having notion of which are they
 
 - Server sided (from server to client)
-  - All-Users:
+  - All-Users: [all_users.proto]
     - Usernames: strings []
     - Status: StatusEnum []
-  - For-dm:
+  - For-dm: [for_dm.proto]
     - Username-des: string
     - Message: string
-
-#TODO: make protos
+  - Broadcast delivery: [broadcast_messages.proto]
+    - Message: string
+    - Username-origin: string
+  - Get user info response: [get_user_info_response.proto]
+    - Ip-address: string
+    - Username: string
+    - Status: StatusEnum
+  - Server response: [server_response.proto]
+    - Status-code: int32
+    - Message: string
